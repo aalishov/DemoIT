@@ -1,0 +1,39 @@
+﻿@model IndexViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h3>The best bar</h3>
+        <div class="card" style="width: 18rem;">
+            <img src="data:image/png;base64,@Html.DisplayFor(modelItem => Model.BestBook.Image)" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">@Model.BestBar.Name</p>
+                <p class="card-text">Average rating: @Model.BestBook.AverageRating</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h3>The worst bar</h3>
+        <div class="card" style="width: 18rem;">
+            <img src="data:image/png;base64,@Html.DisplayFor(modelItem => Model.WorstBar.Image)" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">@Model.WorstBook.Name</p>
+                <p class="card-text">Average rating: @Model.WorstBar.AverageRating</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+    </div>
+</div>
